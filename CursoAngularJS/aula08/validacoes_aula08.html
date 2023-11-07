@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="appAngular">
+<head>
+    <title>Validações de Formulários</title>
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <style>
+
+    </style>
+</head>
+<body ng-controller="Principal as ctl">
+
+    <!-- conteúdo da view -->
+
+
+
+    <!-- definição da api e do controller -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module('appAngular', [])
+            .controller('Principal', [function () {
+
+                var self = this;
+
+                self.submit = function () {
+                    //O objeto aluno é criado implicitamente no form
+                    alert('Dados do segundo formulário: \n' + self.aluno.nome + '\n' + self.aluno.curso);
+                };
+
+            }]);
+    </script>
+</body>
+</html>
