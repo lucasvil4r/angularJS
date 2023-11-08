@@ -7,9 +7,15 @@
 </head>
 <body ng-controller="Principal as ctl">
 
-
+    Variável Mensagem: {{ctl.mensagem}}
         
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module('primeiroController', [])
+            .controller('Principal', [function () {
+                this.mensagem = 'Vindo do controller';
 
+            }]);
+    </script>
 </body>
 </html>

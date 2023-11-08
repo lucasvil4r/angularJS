@@ -8,7 +8,10 @@
 <body ng-controller="Principal as ctl">
 
     <!-- conteúdo da view -->
-
+    <h2>Lista de Alunos</h2>
+    <div ng-repeat="nome in ctl.nomes">
+        {{nome}}
+    </div>
 
 
     <!-- definição da api e do controller -->
@@ -18,8 +21,12 @@
             .controller('Principal', [function () {
 
                 var self = this;
-
-
+                self.nomes = [
+                    'Ademar Torres',
+                    'Cecilia Maria',
+                    'Marcelo Lima'
+                ];
+      
             }]);
     </script>
 </body>
