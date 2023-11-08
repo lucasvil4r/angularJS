@@ -10,7 +10,11 @@
     <!-- conteúdo da view -->
     <h2>Quais cursos deseja realizar?</h2>
     <form name="formCursos">
-
+        <div ng-repeat="curso in ctl.cursos">
+            <label>{{curso.descricao}}
+            <input type="checkbox" ng-model="curso.selecionado" />
+            </label>{{curso.selecionado}}<br />
+        </div>
     </form>
 
     <!-- definição da api e do controller -->

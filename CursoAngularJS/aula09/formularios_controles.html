@@ -41,6 +41,16 @@
 
                 var self = this;
 
+                self.cursos = [
+                    { id: 1, descricao: 'Java' },
+                    { id: 2, descricao: 'NodeJS' },
+                    { id: 3, descricao: 'Excel' }
+                ];
+
+                self.submit = function () {
+                    alert('DADOS DO ALUNO:\nNome:' + self.nome + '\nCurso: ' +
+                        self.curso.descricao + '\nPeriodo: ' + self.periodo);
+                };
             }]);
     </script>
 </body>

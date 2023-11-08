@@ -5,13 +5,34 @@
     <link href="../css/estilos.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <style>
-
+        .nome.ng-valid {
+            color: green;
+        }
+        .nome.ng-dirty.ng-invalid-required {
+            background-color: red;
+        }
+        .nome.ng-dirty.ng-invalid-minlength {
+            color: orange;
+        }
     </style>
 </head>
 <body ng-controller="Principal as ctl">
 
     <!-- conteúdo da view -->
-
+    <h2>Validação de Formulários</h2>
+    <form ng-submit="ctl.submit()" name="alunosForm">
+        Nome:<br />
+        <input type="text" 
+               class="nome" 
+               name="anome" 
+               ng-model="ctl.aluno.nome" 
+               required 
+               ng-minlength="4"/>
+        <span ng-show="alunosForm.anome.$error.required">Campo obrigatório</span><br/>
+        Curso:<br/>
+        <input type="text" ng-model="ctl.aluno.curso"/><br />
+        <input type="submit" value="Enviar" />
+    </form>
 
 
     <!-- definição da api e do controller -->

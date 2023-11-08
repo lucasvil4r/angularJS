@@ -9,7 +9,18 @@
 <body ng-controller="Principal as ctl">
 
     <!-- conteúdo da view -->
+    <h2>Informações da empresa</h2>
+    <div ng-repeat="(atrib, dados) in ctl.empresa">
+        <strong><span ng-bind="atrib"/></strong>
+        <br/>
+        CNPJ: {{dados.CNPJ}}<br/>
+        Descrição: {{dados.Descricao}}<br/>
+        Endereço<br/>
 
+        Logradouro: {{dados.Endereco.Logradouro}}<br/>
+        Número: {{dados.Endereco.Numero}}<br />
+        Cidade: {{dados.Endereco.Cidade}}<br />
+    </div>
 
 
     <!-- definição da api e do controller -->
@@ -20,7 +31,17 @@
 
                 var self = this;
 
-
+                self.empresa = {
+                    Atributos: {
+                        CNPJ: '00.965.778/0001-00',
+                        Descricao: 'Empresa XYZ Ltda',
+                        Endereco: {
+                            Logradouro: 'Avenida Paulista',
+                            Numero: '1009',
+                            Cidade: 'São Paulo'
+                        }
+                    }
+                };
             }]);
     </script>
 </body>

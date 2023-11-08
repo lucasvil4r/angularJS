@@ -10,12 +10,34 @@
     <!-- conteúdo da view -->
     <h2>Verificação do escopo</h2>
     
+    <div ng-controller="Primeiro">
+        <p>{{mensagem}}<br/>{{tipo}}</p>
+    </div>
 
+    <div ng-controller="Segundo">
+        <p>{{mensagem}}<br />{{tipo}}</p>
+    </div>
+
+    <div ng-controller="Terceiro">
+        <p>{{mensagem}}<br />{{tipo}}</p>
+    </div>
 
     <!-- definição da api e do controller -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script type="text/javascript">
         //Observe a não utilização das chaves e o aninhamento de controllers
+        angular.module('appAngular', [])
+            .controller('Primeiro', function ($scope) {
+                $scope.mensagem = "Primeiro Escopo";
+                $scope.tipo = "Primeiro";
+            })
+        .controller('Segundo', function ($scope) {
+            $scope.mensagem = "Segundo Escopo";            
+        })
+        .controller('Terceiro', function ($scope) {
+            $scope.mensagem = "Terceiro Escopo";
+            $scope.tipo = "Terceiro";
+        })
 
     </script>
 </body>

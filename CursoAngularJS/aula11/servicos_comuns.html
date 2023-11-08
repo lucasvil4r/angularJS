@@ -14,9 +14,23 @@
     <!-- definição da api e do controller -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script type="text/javascript">
+        
         //a ordem da injeção de dependência é importante
+        angular.module('appAngular', [])
+            .controller('Principal', ['$location','$window',function ($location,$window) {
+                var self = this;
 
+                self.mostrarLog = function () {
+                    var url = $location.url();
+                    var absUrl = $location.absUrl();
+                    var protocol = $location.protocol();
 
+                    var mensagem = 'URL: ' + url + '\nURL Absoluto: ' + absUrl + '\nPROTOCOLO: '
+                        + protocol;
+
+                    $window.alert(mensagem);
+                };
+            }]);
     </script>
 </body>
 </html>

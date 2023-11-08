@@ -17,28 +17,33 @@
 
     <script type="text/javascript">
         angular.module("appAngular", [])
+            .directive('aluno', function () {
+                var diretiva = {};
 
-        .directive('aluno', function () {
-            var diretiva = {};
-            diretiva.restrict = 'E';
+                diretiva.restrict = 'E';
 
-            diretiva.scope = {
-                aluno: "=name"
-            }
+                diretiva.scope = { aluno: "=name" }
 
-            diretiva.compile = function (element, attributes) {
-                element.css("border", "1px solid #cccccc");
+                diretiva.compile = function (element, atributes) {
+                    element.css("border", "1px solid #cccccc");
 
-                var linkFunction = function ($scope, element, attributes) {
-                    element.html("Aluno: <b>" + $scope.aluno.name + "</b> , Curso: <b>" + $scope.aluno.curso + "</b><br/>");
-                    element.css("background-color", "#e1e1e1");
+                    var linkFunction = function ($scope, element, attributes) {
+                        element.html("Aluno <b>" + $scope.aluno.name + "</b>, Curso: <b>" + $scope.aluno.curso + "</b><br/>");
+                        element.css("background-color", "#e1e1e1");
+                    }
+                    return linkFunction;
                 }
-                return linkFunction;
-            }
-            return diretiva;
-        })
+                return diretiva;
+            })
+            .controller('Principal', function ($scope) {
+                $scope.Francisco = {};
+                $scope.Francisco.name = "Francisco Parashar";
+                $scope.Francisco.curso = "Informática Básica";
 
-
+                $scope.Frederico = {};
+                $scope.Frederico.name = "Frederico Parashar";
+                $scope.Frederico.curso = "Turismo";
+            });
     </script>
 </body>
 </html>

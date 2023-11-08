@@ -37,7 +37,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script type="text/javascript">
+        angular.module("appAngular", [])
+            .controller('Principal', ['$http', function ($http) {
+                var self = this;
 
+                self.items = [];
+
+                $http.get('dados.txt').then(function (response) {
+                    self.items = response.data;
+                }, function (error) {
+                    alert('Erro reportado: ' + error);
+                });
+            }]);
+            
     </script>
 
 </body>

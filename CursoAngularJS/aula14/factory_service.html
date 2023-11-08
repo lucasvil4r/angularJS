@@ -18,7 +18,26 @@
     <script type="text/javascript">
          var appAngular = angular.module("appAngular", []);
 
+         appAngular.factory('MathFactory', function () {
+             var factory = {};
 
+             factory.multiplicar = function (a, b) {
+                 return a * b;
+             }
+             return factory;
+         });
+
+         appAngular.service('MathService', function (MathFactory) {
+             this.calcularQuadrado = function (a) {
+                 return MathFactory.multiplicar(a, a);
+             }
+         });
+
+         appAngular.controller('Principal', function ($scope, MathService) {
+             $scope.calcularQuadrado = function () {
+                 $scope.resultado = MathService.calcularQuadrado($scope.valor);
+             }
+         });
     </script>
 
 </body>

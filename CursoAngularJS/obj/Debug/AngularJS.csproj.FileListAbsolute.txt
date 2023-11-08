@@ -1,0 +1,6 @@
+C:\Users\technoedition\Documents\EAD_Desenvolvimento_de_Aplicacoes_com_AngularJS\AngularJS_Templates\AngularJS\AngularJS\bin\AngularJS.dll.config
+C:\Users\technoedition\Documents\EAD_Desenvolvimento_de_Aplicacoes_com_AngularJS\AngularJS_Templates\AngularJS\AngularJS\bin\AngularJS.dll
+C:\Users\technoedition\Documents\EAD_Desenvolvimento_de_Aplicacoes_com_AngularJS\AngularJS_Templates\AngularJS\AngularJS\bin\AngularJS.pdb
+C:\Users\technoedition\Documents\EAD_Desenvolvimento_de_Aplicacoes_com_AngularJS\AngularJS_Templates\AngularJS\AngularJS\obj\Debug\AngularJS.csprojResolveAssemblyReference.cache
+C:\Users\technoedition\Documents\EAD_Desenvolvimento_de_Aplicacoes_com_AngularJS\AngularJS_Templates\AngularJS\AngularJS\obj\Debug\AngularJS.dll
+C:\Users\technoedition\Documents\EAD_Desenvolvimento_de_Aplicacoes_com_AngularJS\AngularJS_Templates\AngularJS\AngularJS\obj\Debug\AngularJS.pdb
