@@ -38,7 +38,6 @@
     <script type="text/javascript">
         angular.module('appAngular', [])
           .controller('Principal', [function () {
-
               this.alunos = [
                   { nome: 'Jefferson Barros', idade: 25, curso: 'Psicologia' },
                   { nome: 'Ana Carolina', idade: 32, curso: 'Turismo' },
@@ -47,7 +46,6 @@
               ];
 
               this.sortOrder = ['+nome', '-curso'];
-
               this.filterOptions = {
                   "string": '',
                   "object": { idade: 25},
